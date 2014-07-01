@@ -18,6 +18,17 @@ def show
   @shoe = Shoe.find(params[:id])
 end
 
+def edit
+  @shoe = Shoe.find(params[:id])
+end
+
+def update
+  @shoe = Shoe.find(params[:id])
+  @shoe.update_attributes!(shoe_params)
+
+  redirect_to shoes_path 
+end
+
   private
 
   def shoe_params

@@ -15,7 +15,7 @@
 <% @shoes.each do |shoe| %>
   <ul>
     <li>
-      <%= shoe.shoe_type %>
+      <%= link_to "#{shoe.shoe_type}", shoe_path(shoe) %>
       <br>
       <%= shoe.heel %>
     </li>
