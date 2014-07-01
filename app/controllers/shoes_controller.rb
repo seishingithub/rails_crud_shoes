@@ -26,7 +26,12 @@ def update
   @shoe = Shoe.find(params[:id])
   @shoe.update_attributes!(shoe_params)
 
-  redirect_to shoes_path 
+  redirect_to shoes_path
+end
+
+def destroy
+  @shoe = Shoe.find(params[:id]).delete
+  redirect_to shoes_path
 end
 
   private
