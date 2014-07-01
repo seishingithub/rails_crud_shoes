@@ -1,0 +1,23 @@
+<%= form_for @shoe do |f| %>
+  <p>
+    <%= f.label :shoe_type %>
+    <%= f.text_field :shoe_type %>
+  </p>
+  <p>
+    <%= f.label :heel %>
+    <%= f.text_field :heel %>
+  </p>
+  <p>
+    <%= f.submit 'Create Shoes' %>
+  </p>
+<% end %>
+
+<% @shoes.each do |shoe| %>
+  <ul>
+    <li>
+      <%= shoe.shoe_type %>
+      <br>
+      <%= shoe.heel %>
+    </li>
+  </ul>
+<% end %>
